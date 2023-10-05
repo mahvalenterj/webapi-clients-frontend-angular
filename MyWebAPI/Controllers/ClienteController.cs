@@ -11,7 +11,7 @@ namespace MyWebAPI.Controllers
     {
         private static readonly List<ClienteDTO> Clientes = new List<ClienteDTO>
         {
-            new ClienteDTO { Id = 1, Nome = "João", Telefone = "123456789", Endereco = "Rua A" },
+            new ClienteDTO { Id = 1, Nome = "JoÃ£o", Telefone = "123456789", Endereco = "Rua A" },
             new ClienteDTO { Id = 2, Nome = "Maria", Telefone = "987654321", Endereco = "Rua B" },
             new ClienteDTO { Id = 3, Nome = "Paulo", Telefone = "000000000", Endereco = "Rua C" }
 
@@ -39,7 +39,7 @@ namespace MyWebAPI.Controllers
         [HttpPost]
         public IActionResult Create(ClienteDTO cliente)
         {
-            // Sem validações adequadas aqui antes de adicionar o cliente
+            
             cliente.Id = Clientes.Count + 1;
             Clientes.Add(cliente);
 
